@@ -15,7 +15,7 @@ function findNemo(array) {
   console.log(`Call to find Nemo took ${verifyPerformance} miliseconds`)
 }
 
-findNemo(large); // 0(n) --> Linear Time
+// findNemo(large); // 0(n) --> Linear Time
 
 const boxes = [0, 1, 2, 3, 4, 5]
 function logFirstTwoBoxes(array) {
@@ -23,4 +23,22 @@ function logFirstTwoBoxes(array) {
   console.log(array[1]) // 0(1)
 }
 
-logFirstTwoBoxes(boxes) // 0(2) --> Constant Time
+// logFirstTwoBoxes(boxes) // 0(2) --> Constant Time
+
+// Other ways of writing loops
+const findNemo2 = array => {
+  array.forEach(fish => {
+    if (fish === "nemo") {
+      console.log("Found nemo");
+    }
+  })
+}
+
+const findNemo3 = array => {
+  for (let fish of array) {
+    if (fish === "nemo") {
+      console.log("Found nemo");
+    }
+  }
+}
+
